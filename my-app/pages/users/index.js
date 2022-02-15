@@ -1,10 +1,11 @@
 import Navbar from '../../components/navbar'
+import Title from '../../components/Title'
 
 export default function Users() {
   return (
     <div>
       <Navbar />
-      <h1>Users Page</h1>
+      <Title>Users Page</Title>
     </div>
   )
 }

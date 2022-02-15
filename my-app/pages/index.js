@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Navbar from '../components/navbar'
+import Title from '../components/Title'
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <Title>
           Aprendiendo <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </Title>
       </main>
 
       <footer className={styles.footer}>
