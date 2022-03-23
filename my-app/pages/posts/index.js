@@ -3,19 +3,19 @@ import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 
-export default function Posts() {
-  const [posts, setposts] = useState([])
+export default function Posts({ posts }) {
+  //CLIENT SIDE RENDERING
+  // const [posts, setposts] = useState([])
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-      const posts = await res.json()
-      // console.log('[POSTS]: ', posts)
-      setposts(posts)
-    }
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  //     const posts = await res.json()
+  //     setposts(posts)
+  //   }
 
-    fetchPosts()
-  }, [])
+  //   fetchPosts()
+  // }, [])
 
   return (
     <div>
@@ -35,4 +35,15 @@ export default function Posts() {
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const posts = await res.json()
+
+  return {
+    props: {
+      posts,
+    },
+  }
 }
