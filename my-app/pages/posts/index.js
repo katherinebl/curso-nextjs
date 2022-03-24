@@ -23,7 +23,7 @@ export default function Posts({ posts }) {
         <div>
           {posts.map((post) => {
             return (
-              <Link href={`/posts/[id]`} as={`posts/${post.id}`}>
+              <Link href={`/posts/[id]`} as={`/posts/${post.id}`} key={post.id}>
                 <a>
                   <span>✨</span>
                   <p>{post.title}</p>
