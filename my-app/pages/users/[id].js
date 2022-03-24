@@ -1,14 +1,26 @@
 import { useRouter } from 'next/router'
-import Navbar from '../../components/navbar'
+import { useState, useEffect } from 'react'
 
-export default function User1() {
+import Layout from '../../components/Layout'
+
+export default function User() {
   const router = useRouter()
+
+  const [user, setUser] = useState({})
+
+  useEffect(async () => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${router.query.id}`)
+    const user = await res.json()
+
+    setUser(user)
+  }, [])
 
   return (
     <div>
-      <Navbar />
+      <Layout />
       <h2>User Details</h2>
-      <p>User ID: {router.query.id}</p>
+      <p>User ID: {user.id}</p>
+      <p>{user.name}</p>
     </div>
   )
 }
