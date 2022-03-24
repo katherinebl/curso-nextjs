@@ -3,19 +3,6 @@ import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 
 export default function Posts({ posts }) {
-  //CLIENT SIDE RENDERING
-  // const [posts, setposts] = useState([])
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  //     const posts = await res.json()
-  //     setposts(posts)
-  //   }
-
-  //   fetchPosts()
-  // }, [])
-
   return (
     <div>
       <Layout>
@@ -25,7 +12,6 @@ export default function Posts({ posts }) {
             return (
               <Link href={`/posts/[id]`} as={`/posts/${post.id}`} key={post.id}>
                 <a>
-                  <span>✨</span>
                   <p>{post.title}</p>
                 </a>
               </Link>

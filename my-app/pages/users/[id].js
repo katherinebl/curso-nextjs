@@ -17,10 +17,11 @@ export default function User() {
 
   return (
     <div>
-      <Layout />
-      <h2>User Details</h2>
-      <p>User ID: {user.id}</p>
-      <p>{user.name}</p>
+      <Layout>
+        <h2>User Details</h2>
+        <p>User ID: {user.id}</p>
+        <p>{user.name}</p>
+      </Layout>
     </div>
   )
 }
