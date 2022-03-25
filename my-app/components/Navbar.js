@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import styles from '../styles/Home.module.css'
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       <ul>
         <li>
           <Link href="/">
@@ -20,19 +21,6 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-      <style jsx>{`
-        .navbar {
-          background: #eaeaea;
-          padding: 15px;
-        }
-        ul {
-          list-style-type: none;
-          width: 100%;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-evenly;
-        }
-      `}</style>
     </nav>
   )
 }

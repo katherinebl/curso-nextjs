@@ -1,17 +1,18 @@
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
+import styles from '../../styles/Home.module.css'
 
 export default function Posts({ posts }) {
   return (
     <div>
       <Layout>
         <Title>Posts Page</Title>
-        <div>
+        <div className={styles.grid}>
           {posts.map((post) => {
             return (
               <Link href={`/posts/[id]`} as={`/posts/${post.id}`} key={post.id}>
-                <a>
+                <a className={styles.card}>
                   <p>{post.title}</p>
                 </a>
               </Link>
