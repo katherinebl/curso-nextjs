@@ -16,7 +16,7 @@
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
@@ -121,6 +121,26 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+}
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+}
+
+.footerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerText a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.footerText span {
+  margin-right: 5px;
 }
 
 @media (max-width: 600px) {

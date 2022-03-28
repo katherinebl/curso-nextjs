@@ -1,4 +1,5 @@
 import Navbar from './navbar'
+import Footer from './Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Layout(props) {
@@ -6,6 +7,7 @@ export default function Layout(props) {
     <div className={styles.container}>
       <Navbar />
       <main>{props.children}</main>
+      <Footer></Footer>
     </div>
   )
 }
