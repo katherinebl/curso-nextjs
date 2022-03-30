@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "curso-nextjs",
   "private": true,
   "scripts": {
     "dev": "next dev",
